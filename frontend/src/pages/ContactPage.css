@@ -1,0 +1,257 @@
+.contact-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.contact-header {
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.contact-header h1 {
+  color: #542583;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-sections-container {
+  width: 100%;
+}
+
+/* Alert styles */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+/* End alert styles */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.contact-card {
+  background-color: #f8f7fa;
+  border-radius: 4px;
+  padding: 40px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card h2 {
+  color: #542583;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contact-email {
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: 500;
+  margin-top: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.contact-email:hover {
+  color: #004999;
+}
+
+.contact-website {
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: 500;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.contact-website:hover {
+  color: #004999;
+}
+
+.contact-button-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #542583;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+}
+
+.contact-button:hover {
+  background-color: #3f1c64;
+}
+
+/* Contact Form Styles */
+.contact-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f8f7fa;
+  border-radius: 4px;
+}
+
+.contact-form-container h2 {
+  color: #542583;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.inquiry-type-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.inquiry-button {
+  flex: 1;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.inquiry-button:hover {
+  background-color: #e0e0e0;
+}
+
+.inquiry-button.active {
+  background-color: #542583;
+  color: white;
+  border-color: #542583;
+}
+
+.submit-button {
+  display: inline-block;
+  background-color: #542583;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #3f1c64;
+}
+
+.submit-button:disabled {
+  background-color: #9586a0;
+  cursor: not-allowed;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .inquiry-type-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-card {
+    margin-bottom: 20px;
+  }
+  
+  .contact-header {
+    margin-bottom: 30px;
+  }
+  
+  .contact-form-container {
+    padding: 20px;
+  }
+} 

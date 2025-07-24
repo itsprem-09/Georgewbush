@@ -1,0 +1,298 @@
+.stay-connected-page {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Alert styles */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+/* End alert styles */
+
+.hero-header {
+  background-color: #182b49;
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+  position: relative;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-header h2 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.hero-header h1 {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.red-underline {
+  height: 3px;
+  width: 100px;
+  background-color: #d12127;
+  margin: 0 auto;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.subscription-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.intro-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.subscription-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.form-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.publications-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+.form-row.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-row.two-columns .form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group.required label::after {
+  content: " *";
+  color: #d12127;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 16px;
+}
+
+.form-group input.error {
+  border-color: #d12127;
+}
+
+.error-message {
+  color: #d12127;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.publications-section {
+  margin: 30px 0;
+}
+
+.publications-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.checkbox-group {
+  margin-bottom: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  padding-left: 35px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #f5f5f5;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #182b49;
+  border-color: #182b49;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.subscribe-button {
+  display: inline-block;
+  background-color: #182b49;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.subscribe-button:hover {
+  background-color: #0f1d33;
+}
+
+.subscribe-button:disabled {
+  background-color: #6c7a91;
+  cursor: not-allowed;
+}
+
+.publications-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.publications-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.publications-list li {
+  margin-bottom: 25px;
+}
+
+.publications-list h4 {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.publications-list p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.highlight {
+  color: #d12127;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .hero-header h1 {
+    font-size: 32px;
+  }
+  
+  .form-row.two-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .subscription-form-container {
+    flex-direction: column;
+  }
+  
+  .intro-text {
+    margin-bottom: 30px;
+  }
+} 

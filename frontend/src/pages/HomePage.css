@@ -1,0 +1,13 @@
+.home-page {
+  width: 100%;
+}
+
+.features-section {
+  padding: 50px 0;
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 30px 15px;
+  }
+} 

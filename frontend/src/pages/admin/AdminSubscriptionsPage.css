@@ -1,0 +1,346 @@
+.admin-subscriptions {
+  width: 100%;
+}
+
+.subscriptions-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.subscriptions-header h1 {
+  margin: 0 0 15px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #003366;
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.search-container {
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.status-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.filter-btn.active {
+  background-color: #003366;
+  color: white;
+  border-color: #003366;
+}
+
+.subscriptions-content {
+  display: flex;
+  gap: 20px;
+  min-height: calc(100vh - 250px);
+}
+
+.subscriptions-list {
+  flex: 1;
+  min-width: 0; /* Prevent flexbox from overflowing */
+}
+
+.subscription-table-container {
+  overflow-x: auto;
+}
+
+.subscription-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.subscription-table th, 
+.subscription-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.subscription-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+}
+
+.subscription-table tr {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.subscription-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.subscription-table tr.selected {
+  background-color: #e8f4fd;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+}
+
+.status-badge.active {
+  background-color: #e2f8f0;
+  color: #00a28a;
+}
+
+.status-badge.unsubscribed {
+  background-color: #feebef;
+  color: #dc3545;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-btn.view-btn {
+  background-color: #e5eeff;
+  color: #007bff;
+}
+
+.action-btn.activate-btn {
+  background-color: #e2f8f0;
+  color: #00a28a;
+}
+
+.action-btn.unsubscribe-btn {
+  background-color: #fff4de;
+  color: #f0ad4e;
+}
+
+.action-btn.delete-btn {
+  background-color: #feebef;
+  color: #dc3545;
+}
+
+.subscription-details {
+  width: 40%;
+  min-width: 350px;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: calc(100vh - 250px);
+}
+
+.details-header {
+  padding: 20px;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #003366;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.details-content {
+  padding: 20px;
+}
+
+.details-section {
+  margin-bottom: 25px;
+}
+
+.details-section h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #495057;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label, .preference-label {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.preferences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.preference-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.preference-value {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  width: fit-content;
+}
+
+.preference-value.active {
+  background-color: #e2f8f0;
+  color: #00a28a;
+}
+
+.preference-value.inactive {
+  background-color: #feebef;
+  color: #dc3545;
+}
+
+.details-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-activate {
+  background-color: #00a28a;
+  color: white;
+}
+
+.btn-activate:hover {
+  background-color: #008c75;
+}
+
+.btn-unsubscribe {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+.btn-unsubscribe:hover {
+  background-color: #ec971f;
+}
+
+.btn-delete {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #5a6268;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #6c757d;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 992px) {
+  .subscriptions-content {
+    flex-direction: column;
+  }
+  
+  .subscription-details {
+    width: 100%;
+    max-width: none;
+  }
+} 
