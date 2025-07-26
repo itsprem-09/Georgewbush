@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Create API base URL - in production, this would come from environment variables
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://georgewbush.onrender.com/api';
 
 // Create axios instance with default config
 const api = axios.create({

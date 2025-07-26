@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import './App.css';
 
 // Components
@@ -24,6 +24,17 @@ import AdminSchedulingPage from './pages/admin/AdminSchedulingPage';
 import AdminContactsPage from './pages/admin/AdminContactsPage';
 import AdminSubscriptionsPage from './pages/admin/AdminSubscriptionsPage';
 
+// Public Layout for Navbar, Footer, and Outlet
+const PublicLayout = () => (
+  <div className="App">
+    <Navbar />
+    <main className="main-content">
+      <Outlet />
+    </main>
+    <Footer />
+  </div>
+);
+
 function App() {
   return (
     <Router>
@@ -39,24 +50,16 @@ function App() {
           <Route path="subscriptions" element={<AdminSubscriptionsPage />} />
         </Route>
         
-        {/* Public Routes */}
-        <Route path="/" element={
-          <div className="App">
-            <Navbar />
-            <main className="main-content">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/urgent-appointment" element={<UrgentAppointmentPage />} />
-                <Route path="/scheduling-requests" element={<SchedulingRequestsPage />} />
-                <Route path="/books" element={<BooksPage />} />
-                <Route path="/stay-connected" element={<StayConnectedPage />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
-        } />
+        {/* Public Routes with Layout */}
+        <Route path="/" element={<PublicLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="urgent-appointment" element={<UrgentAppointmentPage />} />
+          <Route path="scheduling-requests" element={<SchedulingRequestsPage />} />
+          <Route path="books" element={<BooksPage />} />
+          <Route path="stay-connected" element={<StayConnectedPage />} />
+          <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="contact" element={<ContactPage />} />
+        </Route>
       </Routes>
     </Router>
   );
