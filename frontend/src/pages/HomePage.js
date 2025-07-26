@@ -6,9 +6,9 @@ import './HomePage.css';
 const HomePage = () => {
   const features = [
     {
-      title: 'MILITARY RETIREMENT LETTER REQUESTS',
+      title: 'URGENT APPOINTMENT',
       imageSrc: 'https://img1.wsimg.com/isteam/ip/f7edcadd-a0bc-42f9-98cd-55420a02dcab/W100_LM3938.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:2320,h:1547',
-      linkTo: '/military-retirement'
+      linkTo: '/urgent-appointment'
     },
     {
       title: 'SCHEDULING REQUESTS',
